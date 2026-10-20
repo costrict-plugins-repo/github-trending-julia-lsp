@@ -1,0 +1,15 @@
+{
+  "name": "julia-lsp",
+  "version": "1.0.0",
+  "description": "Julia language server for code intelligence via LanguageServer.jl",
+  "lspServers": {
+    "julia": {
+      "command": "julia",
+      "args": ["--startup-file=no", "--history-file=no", "-e", "using LanguageServer; runserver()"],
+      "extensionToLanguage": {
+        ".jl": "julia"
+      },
+      "startupTimeout": 120000
+    }
+  }
+}
